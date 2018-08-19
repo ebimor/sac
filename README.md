@@ -82,6 +82,7 @@ cd sac
 ```
 cd sac # TODO.before_release: update folder name
 conda env create -f environment.yml
+export PATH="/home/eshahrivar/anaconda3/bin:$PATH"
 source activate sac
 ```
 
