@@ -81,8 +81,8 @@ cd sac
 5. Create and activate conda environment
 ```
 cd sac # TODO.before_release: update folder name
-conda env create -f environment.yml
 export PATH="/home/eshahrivar/anaconda3/bin:$PATH"
+conda env create -f environment.yml
 source activate sac
 ```
 
@@ -98,6 +98,7 @@ conda remove --name sac --all
 ### Training and simulating an agent
 1. To train the agent
 ```
+export PYTHONPATH=$(pwd):${PYTHONPATH}
 python ./examples/mujoco_all_sac.py --env=swimmer --log_dir="/root/sac/data/swimmer-experiment"
 ```
 
