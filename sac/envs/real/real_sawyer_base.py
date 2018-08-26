@@ -49,6 +49,7 @@ class SawyerEnv(Env):
                  include_pose=False):
         super(SawyerEnv, self).__init__()
 
+
         self._action_cost_coeff = action_cost_coeff
 
         # Boolean mask indicating whether each joint will be controlled directly
@@ -75,9 +76,11 @@ class SawyerEnv(Env):
 
         self._num_iter = 0
         self._reset_every_n = reset_every_n
+        print("HELLLOOOOOOOOOOOOOOOOOOOOOOO1")
 
 
-    def initialize(self, use_remote_name=False):
+
+        #def initialize(self, use_remote_name=False):
         """
         Initializes interfaces with ROS and the robot.
 
@@ -91,6 +94,8 @@ class SawyerEnv(Env):
         :param use_remote_name: Should be True if being initialized in a remote environment
         :return: None
         """
+        print("HELLLOOOOOOOOOOOOOOOOOOOOOOO3")
+        use_remote_name=True
         if use_remote_name:
             rospy.init_node("sawyer_interface_remote")
         else:
